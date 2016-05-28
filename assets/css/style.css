@@ -24,7 +24,9 @@ a:hover {text-decoration:none;}
 #socnet {position:absolute; left:18px; bottom:35px; color:#606060; font-size:12px;}
 a.socnet {position:absolute; width:20px; height:20px; bottom:0px;}
 #sn_vk {left:0px; background:url(../images/vk.png) center left no-repeat; width:30px; height:30px; bottom:-1px;}
-#sn_f {left:35px; background:url(../images/f.png) center left no-repeat; width:25px; height:25px; bottom:-1px;} 
-#sn_t {left:65px; background:url(../images/t.png) center left no-repeat; bottom:0px;} 
+#sn_f {left:35px; background:url(../images/f.png) center left no-repeat; width:25px; height:25px; bottom:-1px;}
+#sn_t {left:65px; background:url(../images/t.png) center left no-repeat; bottom:0px;}
+a#sn_g {position:absolute; left:95px; bottom:0px; color:#606060; text-decoration:none;}
+a#sn_g:hover {color:#000000; text-decoration:underline;}
 
 #copy {position:absolute; left:20px; bottom:10px; color:#606060; font-size:12px;}
