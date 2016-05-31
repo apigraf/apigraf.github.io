@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS</title>
+    <meta name="description" content="Про то, как мы разрабатываем web-приложения на фреймворке AngularJS.">
+    <meta name="author" content="Алексей Пихтовников">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="fonts/roboto.css">
+    <link rel="stylesheet" href="fonts/robotoslab.css">
+    <link rel="stylesheet" href="fonts/inconsolata.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+    <script src="../bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <div class="slides">
+        <section>
+            <h3>Разработка на AngularJS</h3>
+            <p>Алексей Пихтовников</p>
+            <p><img class="logo" src="images/logo.svg" alt="Xsolla" /></p>
+        </section>
+
+        <section>
+            <h3>Спасибо!</h3>
+
+            <ul class="size-S">
+                <li><a href="https://github.com/apigraf/angular-start">github.com/apigraf/angular-start</a></li>
+                <li><a href="https://apigraf.github.io/frontend-fellows-angular">apigraf.github.io/frontend-fellows-angular</a></li>
+                <br>
+                <li><a href="https://angularjs.org/">angularjs.org</a></li>
+                <li><a href="https://angular.io/">angular.io</a></li>
+                <br>
+                <li><a href="mailto:a.pihtovnikov@xsolla.com">a.pihtovnikov@xsolla.com</a></li>
+            </ul>
+        </section>
+    </div>
+
+</div>
+
+<script src="../bower_components/reveal.js/lib/js/head.min.js"></script>
+<script src="../bower_components/reveal.js/js/reveal.js"></script>
+
+<script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: false,
+        progress: true,
+        slideNumber: true,
+        center: true,
+        transition: 'slide',
+        history: true,
+        dependencies: [
+            { src: '../bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: '../bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '../bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+            { src: '../bower_components/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+    });
+</script>
+
+</body>
+</html>
