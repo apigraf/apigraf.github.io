@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>AngularJS</title>
-    <meta name="description" content="Про то, как мы разрабатываем web-приложения на фреймворке AngularJS.">
+    <meta name="description" content="Разработка web-приложений на AngularJS - это просто!">
     <meta name="author" content="Алексей Пихтовников">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -28,12 +28,25 @@
 <div class="reveal">
 
     <div class="slides">
+
+        <!-- ======================================== Разработка на AngularJS ======================================== -->
         <section>
+            <p><img class="logo" src="images/logo.svg" alt="Xsolla" /></p>
             <h3>Разработка на AngularJS</h3>
             <p>Алексей Пихтовников</p>
-            <p><img class="logo" src="images/logo.svg" alt="Xsolla" /></p>
         </section>
 
+        <!-- ======================================== Разработка на AngularJS - Это просто ======================================== -->
+        <section>
+            <h3>
+                Разработка на AngularJS<br>
+                <del>Наши грабли</del><br>
+                <span class="fragment">&mdash; это просто!</span>
+            </h3>
+        </section>
+
+        <!-- ======================================== Использовать Angular или нет? ======================================== -->
+        <!--
         <section>
             <section>
                 <h3>Использовать Angular или нет?</h3>
@@ -47,28 +60,155 @@
                 </ul>
             </section>
         </section>
+        -->
 
+        <!-- ======================================== Что такое Angular? ======================================== -->
         <section>
             <section>
-                <h3>Разработка на Angular выгодна...</h3>
+                <h3>Что такое Angular?</h3>
+                <p class="fragment">В первую очередь это фреймворк!</p>
             </section>
 
             <section>
+                <blockquote class=" size-XS" cite="https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA">
+                    &ldquo;<strong>Фреймворк</strong> &mdash;  программная платформа, определяющая структуру программной системы;
+                    программное обеспечение, облегчающее разработку и объединение разных компонентов большого программного проекта.&rdquo;
+                </blockquote>
+            </section>
+        </section>
+
+        <!-- ======================================== Библиотеки и расширения ======================================== -->
+        <section>
+            <h3>Из чего создаётся структура</h3>
+            <ul class="size-S">
+                <li>Шаблоны</li>
+                <li>Директивы</li>
+                <li>Контроллеры</li>
+                <li>Фильтры</li>
+                <li>Сервисы</li>
+                <li>Фабрики</li>
+                <li>Стейты</li>
+            </ul>
+        </section>
+
+        <!-- ======================================== Библиотеки и расширения ======================================== -->
+        <section>
+            <h3>Библиотеки и расширения</h3>
+            <ul class="size-S">
+                <li>по умолчанию включает в себя jqLite</li>
+                <li>jQuery</li>
+                <li>lodash</li>
+                <li>bourbon</li>
+                <li>restangular</li>
+                <li>angular-route</li>
+                <li>angular-translate</li>
+                <li>angular-material</li>
+            </ul>
+        </section>
+
+        <!-- ======================================== Инициализация приложения ======================================== -->
+        <section>
+            <h3>Инициализация приложения</h3>
+<pre><code class="hljs javascript size-XXS" data-trim contenteditable>
+angular.module('myApp', ['ngCookies', 'ngResource', 'ngRoute', 'restangular'])
+    .config(function ($stateProvider, $urlRouterProvider) {
+        // Установка параметров
+    })
+    .controller('myCtrl', function ($scope, myService) {
+        // Код контроллера
+    })
+    .directive('myDirective', function () {
+        // Код директивы
+    })
+    .filter('myFilter', function () {
+        // Код фильтра
+    });
+</code></pre>
+        </section>
+
+        <!-- ======================================== Декларативный подход вместо императивного ======================================== -->
+        <section>
+            <section>
+                <h3>Декларативный подход вместо императивного</h3>
+                <p class="fragment">Сравним два подхода<br>привязки данных в шаблонах...</p>
+            </section>
+
+            <section>
+                <h3>Императивная привязка через jQuery</h3>
+<pre><code class="hljs html size-XXS" data-trim contenteditable>
+<div>
+    <input id="name" type="text" />
+    <span id="message">Привет</span>
+</div>
+<script>
+    var name = $('#name');          // находим элемент ввода
+    var message = $('#message');    // находим элемент вывода
+    name.keyup(function() {         // слушаем события клавиатуры
+        // и обновляем элемент вывода данными из ввода
+        message.text('Привет, ' + name.val() + '!');
+    });
+</script>
+</code></pre>
+                <div>
+                    <p><input id="name1" class="demo" type="text" /></p>
+                    <p><span id="message1">Привет</span></p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Декларативная привязка данных в AngularJS</h3>
+<pre><code class="hljs html size-XS" data-trim contenteditable>
+<div>
+    <input type="text" ng-model="name" />
+    <span>Привет, {{name}}!</span>
+</div>
+</code></pre>
+                <div ng-app="slideExample1">
+                    <p><input class="demo" type="text" ng-model="name"></p>
+                    <p>Привет, {{name}}!</p>
+                </div>
+            </section>
+        </section>
+
+        <!-- ======================================== Декларативный стиль ======================================== -->
+        <section>
+            <p>Декларативный стиль &mdash; сокращают время разработки за счёт прозрачности кода</p>
+            <p>Но если мы говорим о таком преимуществе, как время разработки, то было бы странно обойти стороной автоматическую сборку проекта.</p>
+        </section>
+
+        <!-- ======================================== Автоматизация ======================================== -->
+        <section>
+            <section>
+                <h3>Автоматизация</h3>
+            </section>
+
+            <section>
+                <h3>Автоматическая сборка проекта</h3>
                 <ul class="size-S">
-                    <li>за счёт двухстороннего связывания</li>
-                    <li class="fragment">и при использовании инструментов автоматизации</li>
+                    <li>nodejs</li>
+                    <li>npm</li>
+                    <li>gulp</li>
+                    <li>bower</li>
                 </ul>
             </section>
 
             <section>
-                <p>//TODO</p>
+                <h3>Команды для запуска</h3>
+                <ul class="size-S">
+                    <li>npm install</li>
+                    <li>bower install</li>
+                    <li>gulp serve</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Автоматическое тестирование</h3>
             </section>
         </section>
 
-        <section>
-            <h3>//TODO</h3>
-        </section>
+        <!-- ======================================== Автоматизация ======================================== -->
 
+        <!-- ======================================== Спасибо! Ссылки ======================================== -->
         <section>
             <h3>Спасибо!</h3>
             <ul class="size-XS">
@@ -76,6 +216,7 @@
                 <li>пример - <a href="https://github.com/apigraf/ng-start">github.com/apigraf/ng-start</a></li>
                 <br>
                 <li>сайт и документация - <a href="https://angularjs.org/">angularjs.org</a></li>
+                <li>примеры для вдохновения - <a href="https://www.madewithangular.com">madewithangular.com</a></li>
                 <li>Angular 2 - <a href="https://angular.io/">angular.io</a></li>
                 <br>
                 <li><a href="http://www.ozon.ru/context/detail/id/24938072/">книга на Ozon.ru</a> - &laquo;Разработка веб-приложений с&nbsp;использованием AngularJS&raquo;</li>
@@ -109,5 +250,20 @@
     });
 </script>
 
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+
+<script>
+    angular.module('slideExample1', []);
+    angular.module('slideExample2', []);
+
+    $(document).ready(function() {
+        var name = $('#name1');
+        var message = $('#message1');
+        name.keyup(function() {
+            message.text('Привет, ' + name.val() + '!');
+        });
+    });
+</script>
 </body>
 </html>

@@ -17,7 +17,7 @@
 }
 
 .reveal section img.logo {
-    max-width: 12%;
+    max-width: 50%;
 }
 
 .reveal a {
@@ -164,4 +164,14 @@ pre.size-XXS {
 .hljs-deletion,
 .hljs-meta {
     color: #998;
+}
+
+/* Demo forms */
+
+input[type="text"].demo {
+    border: solid 1px #a8a8a2;
+    padding: 10px 20px !important;
+    line-height: 1.3;
+    font-size: 100%;
+    color: #444A64;
 }
