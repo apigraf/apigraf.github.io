@@ -1,0 +1,11 @@
+{
+  "name": "apigraf.github.io",
+  "dependencies": {
+    "reveal.js": "3.3.0",
+    "lodash": "4.6.1",
+    "jquery": "2.2.2",
+    "angular": "1.5.2",
+    "bourbon": "4.0.2",
+    "neat": "1.6.0"
+  }
+}
