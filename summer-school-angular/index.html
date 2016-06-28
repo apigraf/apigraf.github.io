@@ -36,6 +36,136 @@
             <p>Алексей Пихтовников</p>
         </section>
 
+        <!-- ======================================== До начала занятий ======================================== -->
+        <section>
+            <section>
+                <h2>До начала занятий...</h2>
+            </section>
+
+            <section>
+                <h3>Знать ответы на вопросы</h3>
+                <ul>
+                    <li>Что  такое переменные, массивы, объекты и функции в JS? Обязательно!</li>
+                    <li>Что такое nodejs, npm, bower, gulp и для чего используются?</li>
+                    <li>Что такое framework, MVC, dependency injection?</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Также...</h3>
+                <ul>
+                    <li>Желательно познакомиться с методологией <a href="https://ru.bem.info" target="_blank">БЭМ</a>.</li>
+                    <li>
+                        И посмотреть, что из себя представляет ES6 и какие даёт <a href="https://github.com/lukehoban/es6features" target="_blank">возможности</a>
+                        (на <a href="https://habrahabr.ru/company/plarium/blog/270353/" target="_blank">Хабре</a>).
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Подготовить платформу для разработки:</h3>
+                <ol class="size-XS">
+                    <li>
+                        установить IDE (по вашему усмотрению), <a href="http://git-scm.com/" target="_blank">git</a>,
+                        <a href="http://nodejs.org/" target="_blank">nodejs</a> (вместе с npm),
+                        <a href="https://bower.io/" target="_blank">bower</a>;
+                    </li>
+                    <li>клонировать с GitHub учебный проект ng-start, выполнив команду <code>git clone https://github.com/apigraf/ng-start.git</code>;</li>
+                    <li>перейти в директорию <code>ng-start</code>;</li>
+                    <li>установить зависимости используя команду <code>npm install</code>;</li>
+                    <li>запустить демо проект командой <code>npm run demo</code>;</li>
+                    <li>если всё сделано верно, в браузере откроется страница с текстом <em>&laquo;Главная страница&raquo;</em>.</li>
+                </ol>
+            </section>
+        </section>
+
+        <!-- ======================================== План действий ======================================== -->
+        <section>
+            <section>
+                <h2>План действий</h2>
+            </section>
+
+            <section>
+                <h3>Немного теории</h3>
+                <ul>
+                    <li>Что такое AngularJS, область применения</li>
+                    <li>Двунаправленное связывание данных и декларативный подход</li>
+                    <li>Архитектура Angular приложения</li>
+                    <li>Директивы, контроллеры, сервисы и фильтры</li>
+                    <li>Библиотеки и расширения</li>
+                    <li>Инструменты разработки</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Максимум примеров</h3>
+                <ul>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>И конечно же практика</h3>
+                <ul>
+                    <li>Вместе создадим приложение &laquo;Калькулятор&raquo;</li>
+                    <li>И по максимуму погрузимся в промышленную разработку</li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- ======================================== Декларативный подход вместо императивного ======================================== -->
+        <section>
+            <section>
+                <h3>Декларативный подход вместо императивного</h3>
+                <p class="fragment">Сравним два подхода<br>привязки данных в шаблонах...</p>
+            </section>
+
+            <section>
+                <h3>Императивная привязка через jQuery</h3>
+<pre><code class="hljs html size-XXS" data-trim contenteditable>
+    <div>
+        <input id="name" type="text" />
+        <span id="message">Привет</span>
+    </div>
+    <script>
+        var name = $('#name');          // находим элемент ввода
+        var message = $('#message');    // находим элемент вывода
+        name.keyup(function() {         // слушаем события клавиатуры
+            // и обновляем элемент вывода данными из ввода
+            message.text('Привет, ' + name.val() + '!');
+        });
+    </script>
+</code></pre>
+                <div>
+                    <p><input id="name1" class="demo" type="text" /></p>
+                    <p><span id="message1">Привет</span></p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Декларативная привязка данных в AngularJS</h3>
+<pre><code class="hljs html size-XS" data-trim contenteditable>
+    <div>
+        <input type="text" ng-model="name" />
+        <span>Привет, {{name}}!</span>
+    </div>
+</code></pre>
+                <div ng-app="slideExample1">
+                    <p><input class="demo" type="text" ng-model="name"></p>
+                    <p>Привет, {{name}}!</p>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- ======================================== Angular 2 ======================================== -->
+        <section>
+            <h3>И на последок...</h3>
+            <p>про Angular 2</p>
+        </section>
+
         <!-- ======================================== Спасибо! Ссылки ======================================== -->
         <section>
             <h3>Спасибо!</h3>
@@ -63,7 +193,7 @@
     // Full list of configuration options available at:
     // https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
-        controls: false,
+        controls: true,
         progress: true,
         slideNumber: true,
         center: true,
@@ -85,6 +215,16 @@
     // ===== Код примеров на Angular: =====
 
     // ===== Код примеров на jQuery: =====
+    angular.module('slideExample1', []);
+    angular.module('slideExample2', []);
+
+    $(document).ready(function() {
+        var name = $('#name1');
+        var message = $('#message1');
+        name.keyup(function() {
+            message.text('Привет, ' + name.val() + '!');
+        });
+    });
 
 </script>
 </body>
