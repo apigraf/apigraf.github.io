@@ -5,7 +5,7 @@
 
 .reveal h1, .reveal h2, .reveal h3 {
     text-transform: none;
-    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
     font-weight: 400;
     color: #444A64;
 }
@@ -205,4 +205,42 @@ input[type="text"].demo {
     line-height: 1.3;
     font-size: 100%;
     color: #444A64;
+}
+
+/* theme */
+
+.reveal .slide-number {
+    left: 8px;
+    right: auto;
+}
+
+.reveal .controls {
+    left: 10px;
+    right: auto;
+}
+
+.xsolla-label:before {
+    content: " ";
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    widht: 10%;
+    height: 10%;
+    min-height: 300px;
+    min-width: 300px;
+    background: url(../images/xsolla_logo.svg) right bottom no-repeat;
+    z-index: 1000;
+}
+
+section.xsolla-label:before {
+    display: none;
+}
+
+.main-title {
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background-color: #f7f7f7;*/
 }

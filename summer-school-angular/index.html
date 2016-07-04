@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="../bower_components/reveal.js/css/reveal.css">
     <link rel="stylesheet" href="../bower_components/reveal.js/css/theme/white.css">
     <link rel="stylesheet" href="fonts/roboto.css">
-    <link rel="stylesheet" href="fonts/robotoslab.css">
     <link rel="stylesheet" href="fonts/inconsolata.css">
     <link rel="stylesheet" href="css/custom.css">
 
@@ -30,14 +29,17 @@
     <div class="slides">
 
         <!-- ======================================== Разработка web-приложений на AngularJS ======================================== -->
-        <section>
+        <section data-background="#f7f7f7" class="xsolla-label">
+            <div class="main-title">
+
+            </div>
             <p><img class="logo" src="images/logo.svg" alt="Xsolla" /></p>
             <h3>Разработка web-приложений<br>на AngularJS</h3>
             <p>Алексей Пихтовников</p>
         </section>
 
         <!-- ======================================== До начала занятий ======================================== -->
-        <section>
+        <section data-background="images/pattern.png" data-background-repeat="repeat">
             <section>
                 <h2>До начала занятий...</h2>
             </section>
@@ -116,7 +118,7 @@
         </section>
 
         <!-- ======================================== Декларативный подход вместо императивного ======================================== -->
-        <section>
+        <section class="xsolla-label">
             <section>
                 <h3>Декларативный подход вместо императивного</h3>
                 <p class="fragment">Сравним два подхода<br>привязки данных в шаблонах...</p>
@@ -186,14 +188,23 @@
 
 </div>
 
+<script src="../bower_components/lodash/dist/lodash.js"></script>
 <script src="../bower_components/reveal.js/lib/js/head.min.js"></script>
 <script src="../bower_components/reveal.js/js/reveal.js"></script>
 
 <script>
+    var queryParams = window.location.search.split('?')[1].split('&');
+    var configParams = [];
+    _.forEach(queryParams, function(param) {
+        var paramArray = param.split('=');
+        configParams[paramArray[0]] = paramArray[1];
+    });
+
     // Full list of configuration options available at:
     // https://github.com/hakimel/reveal.js#configuration
+    console.log(configParams);
     Reveal.initialize({
-        controls: true,
+        controls: !!configParams['controls'] && Number(configParams['controls']) === 0 ? false : true,
         progress: true,
         slideNumber: true,
         center: true,

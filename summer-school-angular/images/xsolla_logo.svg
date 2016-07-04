@@ -1,0 +1,26 @@
+<svg id="_3_slide" data-name="3_slide" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 331 331">
+    <defs>
+        <style>
+            .cls-1{opacity:0.05;fill:url(#Безымянный_градиент_25);}
+            .cls-2{fill:#fff;}
+            .cls-3{fill:#964b96;}
+            .cls-4{fill:#c9d410;}
+            .cls-5{fill:#ffce21;}
+            .cls-6{fill:#60c2da;}
+            .cls-7{fill:#ea602b;}
+        </style>
+        <linearGradient id="Безымянный_градиент_25" x1="197.37" y1="198.38" x2="165.87" y2="165.88" gradientUnits="userSpaceOnUse">
+            <stop offset="0"/>
+            <stop offset="0.83" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+    <title>xsolla_logo</title>
+    <polygon class="cls-1" points="0 331 331 331 331 0 0 331"/>
+    <polygon class="cls-2" points="66 331 331 331 331 66 66 331"/>
+    <path class="cls-3" d="M1239.34,3842.59a8.67,8.67,0,1,1,8.66-8.66,8.69,8.69,0,0,1-8.66,8.66h0Zm0-12.83a4.15,4.15,0,1,0,4.13,4.16,4.17,4.17,0,0,0-4.13-4.16h0Z" transform="translate(-949 -3565)"/>
+    <polygon class="cls-4" points="259.14 300 254.63 300 254.63 284.42 259.14 284.42 259.14 300 259.14 300"/>
+    <polygon class="cls-4" points="265.67 300 261.16 300 261.16 284.42 265.67 284.42 265.67 300 265.67 300"/>
+    <polygon class="cls-5" points="280.03 231.53 284.47 227.09 281.25 223.91 276.85 228.35 276.84 228.34 273.62 231.52 273.63 231.53 273.62 231.54 279.34 237.24 274.94 241.64 278.13 244.86 285.76 237.23 280.03 231.53"/>
+    <path class="cls-6" d="M1178.6,3825.26l-9.6,16.57h19.16Zm0,8.59,2.12,3.67h-4.28Z" transform="translate(-949 -3565)"/>
+    <polygon class="cls-7" points="249.56 228.77 246.37 225.55 240.86 231.06 235.34 225.55 232.16 228.77 237.68 234.25 232.16 239.77 235.34 242.99 240.86 237.47 246.37 242.99 249.56 239.77 244.06 234.25 249.56 228.77"/>
+</svg>
