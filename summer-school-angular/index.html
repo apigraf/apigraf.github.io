@@ -200,10 +200,7 @@
         configParams[paramArray[0]] = paramArray[1];
     });
 
-    // Full list of configuration options available at:
-    // https://github.com/hakimel/reveal.js#configuration
-    console.log(configParams);
-    Reveal.initialize({
+    var revealOptions = {
         controls: !!configParams['controls'] && Number(configParams['controls']) === 0 ? false : true,
         progress: true,
         slideNumber: true,
@@ -216,7 +213,35 @@
             { src: '../bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
             { src: '../bower_components/reveal.js/plugin/notes/notes.js', async: true }
         ]
-    });
+    };
+
+    if (configParams['socket_id'] && configParams['socket_secret'] && configParams['socket_node']) {
+        if (configParams['socket_node'] === 'master') {
+            revealOptions.multiplex = {
+                secret: configParams['socket_secret'],
+                id: configParams['socket_id'],
+                url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh'
+            };
+
+            revealOptions.dependencies.push({ src: '//cdn.socket.io/socket.io-1.3.5.js', async: true });
+            revealOptions.dependencies.push({ src: 'plugin/multiplex/master.js', async: true });
+            revealOptions.dependencies.push({ src: 'plugin/notes-server/client.js', async: true });
+        } else if (configParams['socket_node'] === 'client') {
+            revealOptions.multiplex = {
+                secret: null,
+                id: configParams['socket_id'],
+                url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh'
+            };
+
+            revealOptions.dependencies.push({ src: '//cdn.socket.io/socket.io-1.3.5.js', async: true });
+            revealOptions.dependencies.push({ src: 'plugin/multiplex/client.js', async: true });
+        }
+    }
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    console.log(configParams);
+    Reveal.initialize(revealOptions);
 </script>
 
 <script src="../bower_components/jquery/dist/jquery.js"></script>
