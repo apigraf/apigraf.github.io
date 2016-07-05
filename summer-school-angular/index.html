@@ -127,18 +127,18 @@
             <section>
                 <h3>Императивная привязка через jQuery</h3>
 <pre><code class="hljs html size-XXS" data-trim contenteditable>
-    <div>
-        <input id="name" type="text" />
-        <span id="message">Привет</span>
-    </div>
-    <script>
-        var name = $('#name');          // находим элемент ввода
-        var message = $('#message');    // находим элемент вывода
-        name.keyup(function() {         // слушаем события клавиатуры
-            // и обновляем элемент вывода данными из ввода
-            message.text('Привет, ' + name.val() + '!');
-        });
-    </script>
+<div>
+    <input id="name" type="text" />
+    <span id="message">Привет</span>
+</div>
+<script>
+    var name = $('#name');          // находим элемент ввода
+    var message = $('#message');    // находим элемент вывода
+    name.keyup(function() {         // слушаем события клавиатуры
+        // и обновляем элемент вывода данными из ввода
+        message.text('Привет, ' + name.val() + '!');
+    });
+</script>
 </code></pre>
                 <div>
                     <p><input id="name1" class="demo" type="text" /></p>
@@ -149,10 +149,10 @@
             <section>
                 <h3>Декларативная привязка данных в AngularJS</h3>
 <pre><code class="hljs html size-XS" data-trim contenteditable>
-    <div>
-        <input type="text" ng-model="name" />
-        <span>Привет, {{name}}!</span>
-    </div>
+<div>
+    <input type="text" ng-model="name" />
+    <span>Привет, {{name}}!</span>
+</div>
 </code></pre>
                 <div ng-app="slideExample1">
                     <p><input class="demo" type="text" ng-model="name"></p>
@@ -193,7 +193,8 @@
 <script src="../bower_components/reveal.js/js/reveal.js"></script>
 
 <script>
-    var queryParams = window.location.search.split('?')[1].split('&');
+
+    var queryParams = window.location.search.split('?')[1] ? window.location.search.split('?')[1].split('&') : [];
     var configParams = [];
     _.forEach(queryParams, function(param) {
         var paramArray = param.split('=');
@@ -240,7 +241,6 @@
 
     // Full list of configuration options available at:
     // https://github.com/hakimel/reveal.js#configuration
-    console.log(configParams);
     Reveal.initialize(revealOptions);
 </script>
 
