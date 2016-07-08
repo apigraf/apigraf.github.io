@@ -1,13 +1,13 @@
 .reveal, .reveal p {
     font-family: Roboto, Helvetica, Arial, sans-serif;
-    color: #444A64;
+    color: #70707d;
 }
 
 .reveal h1, .reveal h2, .reveal h3 {
     text-transform: none;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-weight: 400;
-    color: #444A64;
+    color: #000000;
 }
 
 .reveal section img {
@@ -20,12 +20,20 @@
     max-width: 50%;
 }
 
+.reveal, .reveal li {
+    color: #ffce21;
+}
+
+.reveal, .reveal li span {
+    color: #70707d;
+}
+
 .reveal a {
-    color: #5A8BE2;
+    color: #ffce21;
 }
 
 .reveal a:hover {
-    color: #5A8BE2;
+    color: #ffce21;
     text-decoration: underline;
 }
 
