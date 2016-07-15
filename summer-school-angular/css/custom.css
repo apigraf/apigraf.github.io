@@ -382,3 +382,7 @@ section.school-label:after {
 .reveal div.topic-title-content-text h2 {
     margin-top: 20px;
 }
+
+.reveal div.topic-title-content-text li {
+    color: #000000;
+}
