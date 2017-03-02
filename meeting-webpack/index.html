@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Meeting. Webpack 2</title>
+    <meta name="description" content="Очень краткий обзор">
+    <meta name="author" content="Алексей Пихтовников">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="fonts/roboto.css">
+    <link rel="stylesheet" href="fonts/robotoslab.css">
+    <link rel="stylesheet" href="fonts/inconsolata.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+    <script src="../bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <div class="slides">
+
+        <section>
+            <p><img class="logo" src="images/logo.svg" alt="Xsolla" /></p>
+            <h3>Webpack</h3>
+        </section>
+
+        <section>
+            <img class="fullscreen" src="images/webpack.png" />
+        </section>
+
+        <section>
+            <h2>Инструменты анализа</h2>
+            <ul>
+                <li>
+                    <a href="http://webpack.github.io/analyse/" target="_blank">Analyse</a>
+                </li>
+                <li>
+                    <a href="https://chrisbateman.github.io/webpack-visualizer/" target="_blank">Visualizer</a>
+                </li>
+                <li>
+                    <a href="https://github.com/th0r/webpack-bundle-analyzer" target="_blank">Analyzer</a>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <ul>
+                <li>
+                    <a href="https://webpack.js.org/" target="_blank">webpack.js.org</a> - Официальный сайт Webpack
+                </li>
+                <li>
+                    <a href="http://learn.javascript.ru/screencast/webpack" target="_blank">learn.javascript.ru/screencast/webpack</a> - Скринкаст
+                </li>
+            </ul>
+        </section>
+    </div>
+
+</div>
+
+
+<script src="../bower_components/reveal.js/lib/js/head.min.js"></script>
+<script src="../bower_components/reveal.js/js/reveal.js"></script>
+
+<script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: false,
+        progress: true,
+        slideNumber: true,
+        center: true,
+        transition: 'slide',
+        history: true,
+        dependencies: [
+            { src: '../bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: '../bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '../bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+            { src: '../bower_components/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+    });
+</script>
+
+s</body>
+</html>
