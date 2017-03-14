@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Isomorphic</title>
+    <meta name="description" content="Очень краткий обзор">
+    <meta name="author" content="Алексей Пихтовников">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="fonts/roboto.css">
+    <link rel="stylesheet" href="fonts/robotoslab.css">
+    <link rel="stylesheet" href="fonts/inconsolata.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+    <script src="../bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <div class="slides">
+
+        <section>
+            <p><img class="logo" src="images/logo.svg" alt="Xsolla" /></p>
+            <h3>Серверный рендеринг на пальцах</h3>
+            <p>Пример простейшего приложения</p>
+        </section>
+
+        <section>
+            <section>
+                <h3 class="big-head">Что сегодня будет</h3>
+                <ul>
+                    <li>Что такое SSR</li>
+                    <li>Как это работает</li>
+                    <li>Какие есть проблемы</li>
+                    <li>Продолжение следует...</li>
+                </ul>
+            </section>
+            <section>
+                <h3 class="big-head">Чего сегодня не будет</h3>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <img class="fullscreen" src="images/rendering.png" />
+        </section>
+
+    </div>
+
+</div>
+
+
+<script src="../bower_components/reveal.js/lib/js/head.min.js"></script>
+<script src="../bower_components/reveal.js/js/reveal.js"></script>
+
+<script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: false,
+        progress: true,
+        slideNumber: true,
+        center: true,
+        transition: 'slide',
+        history: true,
+        dependencies: [
+            { src: '../bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: '../bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '../bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+            { src: '../bower_components/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+    });
+</script>
+
+s</body>
+</html>
