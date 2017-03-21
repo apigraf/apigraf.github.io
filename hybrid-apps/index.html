@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Гибридные приложения</title>
+    <meta name="description" content="Единый код для разных платформ: web, mobile (Android, iOS), desktop (Mac OS, Windows, Linux)">
+    <meta name="author" content="Алексей Пихтовников">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="fonts/roboto.css">
+    <link rel="stylesheet" href="fonts/robotoslab.css">
+    <link rel="stylesheet" href="fonts/inconsolata.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+    <script src="../bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <div class="slides">
+
+        <section>
+            <p><img class="logo" src="images/logo.svg" alt="Xsolla" /></p>
+            <h3>Гибридные приложения</h3>
+            <p class="size-XS">Или единый код для web, mobile и desktop приложений</p>
+        </section>
+
+        <section>
+            <h1 class="big-head">Как?</h1>
+            <ul>
+                <li>Web-технологии (HTML + JS + CSS)</li>
+                <li>Обёртка с доступом к API платформы</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Рассмотрим вариант</h3>
+            <ul>
+                <li>Angular 2</li>
+                <li>Ionic 2</li>
+                <li>Electron</li>
+            </ul>
+        </section>
+
+        <section>
+            <img class="fullscreen" src="images/angular.jpg" />
+        </section>
+
+        <section>
+            <p>Но для начала...</p>
+            <h1>Apache Cordova</h1>
+        </section>
+
+        <section>
+            <img class="fullscreen" src="images/cordova_1.jpg" />
+        </section>
+
+        <section>
+            <img class="fullscreen" src="images/scheme.png" />
+        </section>
+
+        <section>
+            <h3>API</h3>
+            <ul class="size-XS">
+                <li><strong>Accelerometer</strong> - работа с акселерометром</li>
+                <li><strong>Camera</strong> - получение изображения с камеры и работа с фото-библиотеками</li>
+                <li><strong>Capture</strong> - работа с видео, фото и микрофоном</li>
+                <li><strong>Compass</strong> - работа с компасом</li>
+                <li><strong>Contacts</strong> - работа с адресной книгой</li>
+                <li><strong>File</strong> - доступ к файловой системе</li>
+                <li><strong>GeoLocation</strong> - получение координат</li>
+                <li><strong>Media</strong> - проигрывание и запись медиа файлов</li>
+                <li><strong>Network</strong> - монитор соединения</li>
+                <li><strong>Notification</strong> - доступ к вибрации, сигналам и уведомлениям</li>
+                <li><strong>Storage</strong> - работа с WebStorage</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Что посмотреть</h3>
+            <p><a href="http://cordova.apache.org/" target="_blank">Официальный сайт Apache Cordova</a></p>
+            <p><a href="https://cordova.apache.org/docs/ru/6.x/guide/overview/index.html" target="_blank">Там же документация на русском</a></p>
+            <p><a href="https://coligo.io/building-a-mobile-app-with-cordova-vuejs/" target="_blank">Создание приложения на базе Cordova и Vue</a></p>
+        </section>
+
+        <section>
+            <h1>Ionic 2</h1>
+        </section>
+
+        <section>
+            <img class="fullscreen" src="images/ionic.png" />
+        </section>
+
+        <section>
+            <h3>Что посмотреть</h3>
+            <p class="size-XS"><a href="http://ionicframework.com/" target="_blank">Официальный сайт Ionic</a></p>
+            <p class="size-XS"><a href="https://github.com/driftyco/ionic" target="_blank">Репозиторий (есть демки)</a></p>
+            <p class="size-XS"><a href="http://adamdbradley.github.io/building-with-ionic2/" target="_blank">Презентация Адама Брэдли</a><br><small>(Рассмотрим детальнее)</small></p>
+            <p class="size-XS"><a href="https://github.com/driftyco/ionic-conference-app" target="_blank">Ionic Conference App (Полноценное приложение)</a><br><small>(Рассмотрим как демо)</small></p>
+            <p class="size-XS"><a href="https://scotch.io/tutorials/build-a-mobile-app-with-angular-2-and-ionic-2" target="_blank">Пример создания приложения (от установки до сборки)</a></p>
+            <p class="size-XS"><a href="https://habrahabr.ru/company/simpleweek/blog/254681/" target="_blank">Ionic framework. Обзор экосистемы</a></p>
+            <p class="size-XS"><a href="https://habrahabr.ru/post/302084/" target="_blank">Ionic: комментарии к мифам после года использования</a></p>
+        </section>
+
+        <section>
+            <h1>Electron</h1>
+        </section>
+
+        <section>
+            <img class="fullscreen" src="images/electron.jpg" />
+        </section>
+
+        <section>
+            <h3>Схема та же</h3>
+            <p>Web приложение + оболочка</p>
+        </section>
+
+        <section>
+            <img class="fullscreen" src="images/electron-api.png" />
+            <p class="size-XS"><a href="https://electron.atom.io/docs/api/" target="_blank">Справочник API</a></p>
+
+        </section>
+
+        <section>
+            <h3>Что посмотреть</h3>
+            <p class="size-XS"><a href="https://electron.atom.io/" target="_blank">Официальный сайт Electron</a></p>
+            <p class="size-XS"><a href="https://github.com/electron/electron" target="_blank">Репозиторий</a></p>
+            <p class="size-XS"><a href="https://github.com/electron/electron/tree/master/docs-translations/ru-RU" target="_blank">Документация на русском</a></p>
+            <p class="size-XS"><a href="https://github.com/electron/electron-api-demos" target="_blank">Демо API</a><br><small>(Детальнее рассмотрим)</small></p>
+            <p class="size-XS"><a href="https://github.com/electron/electron-quick-start" target="_blank">Quick start (простой проект)</a><br><small>(Детальнее рассмотрим)</small></p>
+            <p class="size-XS">Дополнительно:<br><a href="https://github.com/JonnyBGod/angular2-webpack-advance-starter" target="_blank">Angular2 Webpack Starter (NativeScript, Electron)</a></p>
+        </section>
+
+    </div>
+
+</div>
+
+
+<script src="../bower_components/reveal.js/lib/js/head.min.js"></script>
+<script src="../bower_components/reveal.js/js/reveal.js"></script>
+
+<script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: false,
+        progress: true,
+        slideNumber: true,
+        center: true,
+        transition: 'slide',
+        history: true,
+        dependencies: [
+            { src: '../bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: '../bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '../bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+            { src: '../bower_components/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+    });
+</script>
+
+s</body>
+</html>
