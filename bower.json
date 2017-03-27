@@ -1,7 +1,7 @@
 {
   "name": "apigraf.github.io",
   "dependencies": {
-    "reveal.js": "3.3.0",
+    "reveal.js": "3.4.1",
     "lodash": "4.6.1",
     "jquery": "2.2.2",
     "angular": "1.5.2",

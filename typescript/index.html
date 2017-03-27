@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>TypeScript</title>
+    <meta name="description" content="Введение в TypeScript. Немного теории и простые примеры.">
+    <meta name="author" content="Алексей Пихтовников">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="fonts/roboto.css">
+    <link rel="stylesheet" href="fonts/robotoslab.css">
+    <link rel="stylesheet" href="fonts/inconsolata.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+    <script src="../bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <div class="slides">
+
+        <section>
+            <p><img class="logo" src="images/logo.svg" alt="Xsolla" /></p>
+            <h3>TypeScript</h3>
+        </section>
+
+        <section>
+            <section>
+                <h3>Для начала...</h3>
+            </section>
+
+            <section>
+                <p><strong>TypeScript</strong> — строго типизированный и компилируемый язык, расширяющий возможности JavaScript.</p>
+            </section>
+
+            <section>
+                <p><strong>Anders Hejlsberg</strong> — разработчик языка, создавший ранее Turbo Pascal, Delphi и C#.</p>
+                <p>Представлен Microsoft в 2012 г.</p>
+                <p>Open source.</p>
+            </section>
+
+            <section>
+                <p>TypeScript обратно совместимым с JavaScript<br>и компилируется в него.</p>
+            </section>
+
+            <section>
+                <p>TypeScript — объектно-ориентирован.</p>
+            </section>
+
+            <section>
+                <ul class="size-XS">
+                    <li>Аннотации типов (и проверка их согласования на этапе компиляции)</li>
+                    <li>Вывод типов</li>
+                    <li>Классы</li>
+                    <li>Интерфейсы</li>
+                    <li>Перечисляемые типы</li>
+                    <li>Примесь</li>
+                    <li>Обобщённое программирование</li>
+                    <li>Модули</li>
+                    <li>Стрелочные функции</li>
+                    <li>Дополнительные параметры и параметры по умолчанию</li>
+                    <li>Кортежи</li>
+                    <li>и др.</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Установка и настройка</h2>
+            </section>
+
+            <section>
+                <p>Node.js</p>
+                <p>+</p>
+                <p>npm</p>
+            </section>
+
+            <section>
+                <p>npm install -g typescript</p>
+                <p>или</p>
+                <p>через package.json</p>
+            </section>
+
+            <section>
+                <p>tsconfig.json</p>
+            </section>
+
+            <section>
+<pre><code class="hljs json size-XS" data-trim contenteditable>
+{
+    "compilerOptions": {
+        "target": "es5",
+        "removeComments": true,
+        "outFile": "../../built/local/tsc.js"
+    },
+    "files":[
+        "app.ts"
+    ],
+    "exclude":[
+        "node_modules"
+    ]
+}
+</code></pre>
+            </section>
+
+            <section>
+                tsc app.ts
+            </section>
+
+            <section>
+                К примеру...
+            </section>
+
+            <section>
+                <p>index.html</p>
+<pre><code class="hljs html size-XS" data-trim contenteditable>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;<meta charset="utf-8" />&lt;/head&gt;
+&lt;body&gt;
+    <div id="content"></div>
+    <script src="app.js"></script>
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            </section>
+
+            <section>
+                <p>app.ts</p>
+<pre><code class="hljs typescript size-XS" data-trim contenteditable>
+class User{
+    public name: string;
+    public age: number;
+    constructor(_name: string, _age: number) {
+        this.name = _name;
+        this.age = _age;
+    }
+}
+let tom: User = new User("Том", 29);
+
+let el = document.getElementById("content");
+el.innerHTML="Имя: " + tom.name + ", возраст: " + tom.age;
+</code></pre>
+            </section>
+
+            <section>
+                <p>app.js</p>
+<pre><code class="hljs javascript size-XS" data-trim contenteditable>
+var User = (function () {
+    function User(_name, _age) {
+        this.name = _name;
+        this.age = _age;
+    }
+    return User;
+}());
+var tom = new User("Том", 29);
+
+var el = document.getElementById("content");
+el.innerHTML = "Имя: " + tom.name + ", возраст: " + tom.age;
+</code></pre>
+            </section>
+
+            <section>
+                Имя: Том, возраст: 29
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Основы TypeScript</h2>
+            </section>
+
+            <section>
+                <h3>Объявление переменных<br>и констант</h3>
+            </section>
+
+            <section>
+                <h3>Типы данных</h3>
+            </section>
+
+            <section>
+                <h3>Функции</h3>
+            </section>
+
+            <section>
+                <h3>Тип функции<br>и лямбда-выражения</h3>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Объектно-ориентированное программирование</h2>
+            </section>
+
+            <section>
+                <h3>Классы</h3>
+            </section>
+
+            <section>
+                <h3>Наследование</h3>
+            </section>
+
+            <section>
+                <h3>Преобразование типов</h3>
+            </section>
+
+            <section>
+                <h3>Модификаторы и методы доступа</h3>
+            </section>
+
+            <section>
+                <h3>Обобщения</h3>
+            </section>
+
+            <section>
+                <h3>Миксины</h3>
+            </section>
+
+            <section>
+                <h3>Пространства имен</h3>
+            </section>
+
+            <section>
+                <h3>Модули</h3>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Заголовочные файлы</h2>
+            </section>
+        </section>
+
+        <section>
+            <h2><a href="https://github.com/Microsoft/TypeScriptSamples" target="_blank">Примеры</a></h2>
+            <p>(Рассмотрим подробнее)</p>
+        </section>
+
+        <section>
+            <p><a href="http://www.typescriptlang.org" target="_blank">Официальный сайт</a></p>
+            <p><a href="https://metanit.com/web/typescript/" target="_blank">Руководство по TypeScript (рус.)</a></p>
+        </section>
+    </div>
+
+</div>
+
+
+<script src="../bower_components/reveal.js/lib/js/head.min.js"></script>
+<script src="../bower_components/reveal.js/js/reveal.js"></script>
+
+<script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        slideNumber: true,
+        center: true,
+        transition: 'slide',
+        history: true,
+        dependencies: [
+            { src: '../bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: '../bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '../bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+            { src: '../bower_components/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+    });
+</script>
+
+s</body>
+</html>

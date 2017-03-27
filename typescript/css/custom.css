@@ -1,0 +1,187 @@
+.reveal, .reveal p {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    color: #444A64;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+    text-transform: none;
+    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #444A64;
+}
+
+.reveal h1.big-head, .reveal h2.big-head, .reveal h3.big-head {
+    margin-bottom: 6%;
+}
+
+.reveal section img {
+    box-shadow: none;
+    background: none;
+    border: none;
+}
+
+.reveal section img.logo {
+    max-width: 50%;
+}
+
+.reveal section img.fullscreen {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.reveal a {
+    color: #5A8BE2;
+}
+
+.reveal a:hover {
+    color: #5A8BE2;
+    text-decoration: underline;
+}
+
+.reveal .slide-number {
+    color: #8F7C43;
+    background-color: #FCDB77;
+}
+
+.reveal .progress {
+    background: rgba(215, 206, 234, 0.5);
+}
+
+.reveal .progress span {
+    background: #8D7BB7;
+}
+
+.reveal pre {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+}
+
+.reveal code, .reveal pre code {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Inconsolata, monospace, Courier, Helvetica, Arial, sans-serif;
+    max-height: 600px;
+}
+
+.reveal blockquote {
+    font-style: normal;
+    font-family: Inconsolata, "Roboto Slab", Helvetica, Arial, sans-serif;
+    border: 1px dotted;
+    padding: 20px;
+}
+
+section.size-L,
+section .size-L,
+pre.size-L {
+    font-size: 60px;
+    line-height: 90px;
+}
+
+section.size-M,
+section .size-M,
+pre.size-M {
+    font-size: 50px;
+    line-height: 75px;
+}
+
+section.size-S,
+section .size-S,
+pre.size-S {
+    font-size: 40px;
+    line-height: 60px;
+}
+
+section.size-XS,
+section .size-XS,
+pre.size-XS {
+    font-size: 30px;
+    line-height: 45px;
+}
+
+section.size-XXS,
+section .size-XXS,
+pre.size-XXS {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/* hightlight.js (custom or from https://github.com/isagalaev/highlight.js/tree/master/src/styles) */
+
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #444A64;
+}
+
+.hljs {
+    color: #C1CBDF;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+    color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-link,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal {
+    color: #6896ba;
+}
+
+.hljs-code,
+.hljs-selector-class {
+    color: #C1CBDF;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-section,
+.hljs-attribute,
+.hljs-name,
+.hljs-variable {
+    color: #5A8BE2;
+}
+
+.hljs-params {
+    color: #b9b9b9;
+}
+
+.hljs-string,
+.hljs-subst,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-symbol,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-addition {
+    color: #FCDB77;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+    color: #998;
+}
+
+/* Demo forms */
+
+input[type="text"].demo {
+    border: solid 1px #a8a8a2;
+    padding: 10px 20px !important;
+    line-height: 1.3;
+    font-size: 100%;
+    color: #444A64;
+}
