@@ -57,6 +57,10 @@
     box-shadow: none;
 }
 
+.reveal pre.highlight {
+    padding: 5px 20px;
+}
+
 .reveal code, .reveal pre code {
     padding-left: 15px;
     padding-right: 15px;
