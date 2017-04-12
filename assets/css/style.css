@@ -1,6 +1,7 @@
 * {margin:0px; padding:0px; border:0px;}
 html, body {height:100%; width:100%;}
-body {position:relative; background:#ffffff url(../images/graf.jpg) no-repeat center center fixed; background-size:cover; color:#404040; font-family:Arial,Verdana,Tahoma; font-size:0.8em;}
+body {position:relative; background:#ffffff; color:#404040; font-family:Arial,Verdana,Tahoma; font-size:0.8em;}
+body.photo {background:#ffffff url(../images/graf.jpg) no-repeat center center fixed; background-size:cover;}
 table {width:100%; border-collapse:collapse; position:relative;}
 tr {position:relative;}
 td {vertical-align:top; position:relative;}
@@ -20,6 +21,12 @@ a:hover {text-decoration:none;}
 #mail a {color:#606060; text-decoration:none;}
 #mail a:hover {color:#000000; text-decoration:underline;}
 #addr {font-size:18px; color:#606060;}
+
+#list {font-size:26px; padding-top: 40px;}
+#list p {margin-bottom: 15px;}
+#list p:first-child {margin-bottom: 25px;}
+#list p a {text-decoration: none;}
+#list p a:hover {text-decoration: underline;}
 
 #socnet {position:absolute; left:18px; bottom:35px; color:#606060; font-size:12px;}
 a.socnet {position:absolute; width:20px; height:20px; bottom:0px;}
