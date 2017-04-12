@@ -29,11 +29,13 @@
 
     <div class="slides">
 
+        <!-- ================================================================= -->
         <section>
             <p><img class="logo" src="images/logo.svg" alt="Xsolla" /></p>
             <h3>TypeScript</h3>
         </section>
 
+        <!-- ================================================================= -->
         <section>
             <section>
                 <h3>Для начала...</h3>
@@ -75,6 +77,7 @@
             </section>
         </section>
 
+        <!-- ================================================================= -->
         <section>
             <section>
                 <h2>Установка и настройка</h2>
@@ -176,6 +179,7 @@ el.innerHTML = "Имя: " + tom.name + ", возраст: " + tom.age;
             </section>
         </section>
 
+        <!-- ================================================================= -->
         <section>
             <section>
                 <h2>Основы TypeScript</h2>
@@ -186,7 +190,95 @@ el.innerHTML = "Имя: " + tom.name + ", возраст: " + tom.age;
             </section>
 
             <section>
+                <p>var, let, const</p>
+            </section>
+
+            <section>
+<pre class="highlight typescript size-M" data-trim contenteditable>
+var x = "hello";
+console.log(x); <span class="fragment zoom-in">// hello</span>
+
+var x = "work";
+console.log(x); <span class="fragment zoom-in">// work</span>
+</pre>
+            </section>
+
+            <section>
+<pre class="highlight typescript size-M" data-trim contenteditable>
+let x = "hello";
+console.log(x);
+
+let x = "work"; <span class="fragment zoom-in">// Error</span>
+console.log(x);
+</pre>
+            </section>
+
+            <section>
+<pre class="highlight typescript size-M" data-trim contenteditable>
+let z = 6;
+z = 8;
+</pre>
+                <p class="fragment">А если...</p>
+<pre class="fragment highlight typescript size-M" data-trim contenteditable>
+const z = 6;
+z = 8; <span class="fragment zoom-in">// Error</span>
+</pre>
+            </section>
+
+            <section>
+                <p>Но если...</p>
+<pre class="highlight typescript size-M" data-trim contenteditable>
+const z = {a: 6};
+z.a = 8;
+</pre>
+            </section>
+
+            <!-- ================================================================= -->
+            <section>
                 <h3>Типы данных</h3>
+            </section>
+
+            <section>
+                <ul>
+                    <li><strong>Boolean</strong> логическое значение true или false</li>
+                    <li><strong>Number</strong> числовое значение</li>
+                    <li><strong>String</strong> строки</li>
+                    <li><strong>Array</strong> массивы</li>
+                    <li><strong>Tuple</strong> кортежи</li>
+                    <li><strong>Enum</strong> перечисления</li>
+                    <li><strong>Any</strong> произвольный тип</li>
+                    <li><strong>Null и undefined</strong> соответствуют значениям null и undefined в javascript</li>
+                    <li><strong>Void</strong> отсутствие конкретного типа</li>
+                </ul>
+            </section>
+
+            <section>
+<pre class="highlight typescript size-S" data-trim contenteditable>
+let x: number = 10;
+let hello: string = "hello world";
+let isValid: boolean = true;
+</pre>
+            </section>
+
+            <section>
+<pre class="highlight typescript size-S" data-trim contenteditable>
+let hello: string = "hello world";
+hello = 23; <span class="fragment zoom-in">// Error</span>
+</pre>
+            </section>
+
+            <section>
+<pre class="highlight typescript size-S" data-trim contenteditable>
+let x;  // type any
+x = 10;
+</pre>
+            </section>
+
+            <section>
+<pre class="highlight typescript size-XS" data-trim contenteditable>
+let names: string[] = ["Tom", "Bob", "Alice"];
+console.log(names[1]); <span class="fragment zoom-in">// Bob</span>
+</pre>
             </section>
 
             <section>
@@ -198,6 +290,7 @@ el.innerHTML = "Имя: " + tom.name + ", возраст: " + tom.age;
             </section>
         </section>
 
+        <!-- ================================================================= -->
         <section>
             <section>
                 <h2>Объектно-ориентированное программирование</h2>
@@ -236,17 +329,20 @@ el.innerHTML = "Имя: " + tom.name + ", возраст: " + tom.age;
             </section>
         </section>
 
+        <!-- ================================================================= -->
         <section>
             <section>
                 <h2>Заголовочные файлы</h2>
             </section>
         </section>
 
+        <!-- ================================================================= -->
         <section>
             <h2><a href="https://github.com/Microsoft/TypeScriptSamples" target="_blank">Примеры</a></h2>
             <p>(Рассмотрим подробнее)</p>
         </section>
 
+        <!-- ================================================================= -->
         <section>
             <p><a href="http://www.typescriptlang.org" target="_blank">Официальный сайт</a></p>
             <p><a href="https://metanit.com/web/typescript/" target="_blank">Руководство по TypeScript (рус.)</a></p>
@@ -271,12 +367,18 @@ el.innerHTML = "Имя: " + tom.name + ", возраст: " + tom.age;
         history: true,
         dependencies: [
             { src: '../bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-            { src: '../bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '../bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+                hljs.initHighlightingOnLoad();
+
+                [].forEach.call( document.querySelectorAll( '.highlight' ), function( v, i) {
+                    hljs.highlightBlock(v);
+                });
+            } },
             { src: '../bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
             { src: '../bower_components/reveal.js/plugin/notes/notes.js', async: true }
         ]
     });
 </script>
 
-s</body>
+</body>
 </html>
