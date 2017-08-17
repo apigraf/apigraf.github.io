@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Современный frontend</title>
+    <meta name="description" content="Как устроено современное web-приложение, какие используются технологии и стандарты при его создании в 2017 году.">
+    <meta name="author" content="Алексей Пихтовников">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../bower_components/reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="fonts/roboto.css">
+    <link rel="stylesheet" href="fonts/robotoslab.css">
+    <link rel="stylesheet" href="fonts/inconsolata.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+    <script src="../bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <div class="slides">
+
+        <!-- ================================================================= -->
+        <section>
+            <p><img class="logo" src="images/logo.svg" alt="Xsolla" /></p>
+            <h3>Современный frontend</h3>
+            <p><small>Докладчик: Алексей Пихтовников</small></p>
+        </section>
+
+        <!-- ================================================================= -->
+        <section>
+            <section>
+                <h3>Что такое frontend?</h3>
+                <h3>Кто такой frontend разработчик?</h3>
+            </section>
+
+            <section>
+                <img class="fullscreen" src="images/fvsb.png" />
+            </section>
+
+            <section>
+                <h3>Процесс разработки</h3>
+                <p>Постановка задачи, реализация, ревью кода, тестирование, деплой</p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h3>Как устроено современное<br>web-приложение</h3>
+            </section>
+
+            <section>
+                <p>Немного истории</p>
+            </section>
+
+            <section>
+                <img class="fullscreen" src="images/h1.png" />
+                <p>Почти все 90-е</p>
+            </section>
+
+            <section>
+                <img class="fullscreen" src="images/h2.png" />
+                <p>Середина 90-х (GIF и табличная вёрстка)</p>
+            </section>
+
+            <section>
+                <img class="fullscreen" src="images/h3.png" />
+                <p>1996 (Flash)</p>
+            </section>
+
+            <section>
+                <img class="fullscreen" src="images/h4.png" />
+                <p>Начало 2000-х (распространение CSS)</p>
+            </section>
+
+            <section>
+                <img class="fullscreen" src="images/h5.png" />
+                <p>Web 2.0 (внимание типографике, лиды, клиенты)</p>
+            </section>
+
+            <section>
+                <img class="fullscreen" src="images/h6.png" />
+                <p>Сегодня</p>
+            </section>
+
+            <section>
+                <img class="fullscreen" src="images/evo.jpg" />
+            </section>
+
+            <section>
+                <p>Оптимизация и ускорение</p>
+            </section>
+
+            <section>
+                <ul>
+                    <li>Уменьшение количества HTTP-запросов</li>
+                    <li>Использование CDN</li>
+                    <li>Использование HTTP-заголовка Expires</li>
+                    <li>Размещение CSS в HEADER</li>
+                    <li>Размещение скриптов в конец страницы</li>
+                    <li>Уменьшение количества DNS-запросов</li>
+                    <li>Минификация файлов</li>
+                    <li>Исключение (по возможности) редиректов</li>
+                    <li>Исключение повторяющегося кода</li>
+                    <li>Кэширование все, что можно кэшировать</li>
+                    <li>Gzip</li>
+                    <li>Lazy load</li>
+                    <li>Серверный рендеринг</li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- ================================================================= -->
+        <section>
+            <section>
+                <h3>Технологии и стандарты</h3>
+            </section>
+
+            <section>
+                <h3>Фреймворки и библиотеки</h3>
+                <p>Angular, React, Vue, Backbone и т.д.</p>
+            </section>
+
+            <section>
+                <h3>JavaScript и спецификации</h3>
+                <p>ES5, ES6, TS и т.д.</p>
+            </section>
+
+            <section>
+                <h3>Стили</h3>
+                <p>Flexbox, grid</p>
+            </section>
+
+            <section>
+                <h3>Препроцессоры</h3>
+                <p>Less, SASS</p>
+            </section>
+        </section>
+
+        <!-- ================================================================= -->
+        <section>
+            <section>
+                <h3>Автоматизация и окружение</h3>
+            </section>
+
+            <section>
+                <ul>
+                    <li>IDE (какие бываю и что могут)</li>
+                    <li>Контроль версий (git)</li>
+                    <li>Платформа (Node.js)</li>
+                    <li>Менеджеры пакетов (npm, Bower)</li>
+                    <li>Инструменты сборки (Gulp, Webpack)</li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- ================================================================= -->
+        <section>
+            <ul>
+                <li><a href="http://flexboxfroggy.com/" target="_blank">flexboxfroggy</a></li>
+                <li><a href="http://learngitbranching.js.org/" target="_blank">learngitbranching</a></li>
+            </ul>
+        </section>
+    </div>
+
+</div>
+
+
+<script src="../bower_components/reveal.js/lib/js/head.min.js"></script>
+<script src="../bower_components/reveal.js/js/reveal.js"></script>
+
+<script>
+    var queryParams = window.location.search.split('?')[1] ? window.location.search.split('?')[1].split('&') : [];
+    var config = [];
+    queryParams.forEach(function(param) {
+        var paramArray = param.split('=');
+        config[paramArray[0]] = paramArray[1];
+    });
+
+    var revealOptions = {
+        controls: !Number(config['controls']),
+        progress: true,
+        slideNumber: true,
+        center: true,
+        transition: 'slide',
+        history: true,
+        dependencies: [
+            { src: '../bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: '../bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() {
+                hljs.initHighlightingOnLoad();
+
+                [].forEach.call( document.querySelectorAll( '.highlight' ), function( v, i) {
+                    hljs.highlightBlock(v);
+                });
+            } },
+            { src: '../bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+            { src: '../bower_components/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+    };
+
+    // Generate token: https://reveal-js-multiplex-ccjbegmaii.now.sh
+    if (config['id'] && config['secret'] && config['node']) {
+        if (config['node'] === 'master') {
+            revealOptions.multiplex = {
+                secret: config['secret'],
+                id: config['id'],
+                url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh'
+            };
+
+            revealOptions.dependencies.push({ src: 'https://cdn.socket.io/socket.io-1.3.5.js', async: true });
+            revealOptions.dependencies.push({ src: '../bower_components/reveal.js/plugin/multiplex/master.js', async: true });
+        } else if (config['node'] === 'client') {
+            revealOptions.multiplex = {
+                secret: null,
+                id: config['id'],
+                url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh'
+            };
+
+            revealOptions.dependencies.push({ src: 'https://cdn.socket.io/socket.io-1.3.5.js', async: true });
+            revealOptions.dependencies.push({ src: '../bower_components/reveal.js/plugin/multiplex/client.js', async: true });
+        }
+    }
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize(revealOptions);
+</script>
+
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+
+<script>
+    // ===== Код примеров на Angular: =====
+
+    // ===== Код примеров на jQuery: =====
+    angular.module('slideExample1', []);
+    angular.module('slideExample2', []);
+
+    $(document).ready(function() {
+        var name = $('#name1');
+        var message = $('#message1');
+        name.keyup(function() {
+            message.text('Привет, ' + name.val() + '!');
+        });
+    });
+
+</script>
+
+</body>
+</html>
